@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Navbar from './Components/navbar/Navbar.jsx';
+import Search from './Components/Search_bar/Search.jsx'
+import Contacts from './Components/Contacts/Contacts.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App mx-auto  max-w-[350px] m-auto">
+      <Navbar/>
+      <Search/>
+      <Contacts/>
+      <ToastContainer
+        position='bottom-center'
+      />
     </div>
   );
 }
